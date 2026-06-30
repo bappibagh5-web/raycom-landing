@@ -11,8 +11,8 @@ const CONFIG: ISourceOptions = {
   background: { color: { value: "transparent" } },
   particles: {
     number: {
-      // 35 particles total — subtle, not a starfield
-      value: 35,
+      // 65 particles total — ~1.85× previous count, still subtle
+      value: 65,
       density: { enable: false },
     },
     color: {
