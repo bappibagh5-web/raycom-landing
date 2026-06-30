@@ -34,8 +34,8 @@ export default function Navbar() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center">
                 <Wifi size={16} className="text-white" />
               </div>
-              <span className="text-white font-bold text-lg tracking-tight">
-                Ray<span className="gradient-text">Comm</span>
+              <span className="text-white font-bold text-sm sm:text-base tracking-tight whitespace-nowrap">
+                Ray <span className="gradient-text">Communications</span>
               </span>
             </div>
 

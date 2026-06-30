@@ -115,8 +115,8 @@ export default function Footer() {
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/25">
                 <Wifi size={17} className="text-white" />
               </div>
-              <span className="text-white font-bold text-lg tracking-tight">
-                Ray<span className="gradient-text">Comm</span>
+              <span className="text-white font-bold text-base tracking-tight">
+                Ray <span className="gradient-text">Communications</span>
               </span>
             </div>
 
@@ -211,7 +211,7 @@ export default function Footer() {
           className="border-t border-white/8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3"
         >
           <p className="text-white/30 text-sm">
-            © 2026 RayComm. All rights reserved.
+            © 2026 Ray Communications. All rights reserved.
           </p>
           {/* Support line — clearly distinct from head office numbers above */}
           <p className="text-white/30 text-sm">

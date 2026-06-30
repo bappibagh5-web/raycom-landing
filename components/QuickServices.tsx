@@ -10,7 +10,7 @@ const services = [
   {
     icon: Tv,
     title: "IPTV Streaming",
-    desc: "Enjoy smooth and high-quality IPTV streaming directly from RayComm.",
+    desc: "Enjoy smooth and high-quality IPTV streaming directly from Ray Communications.",
     cta: "Watch IPTV Now",
     href: "http://172.20.102.2/",
     // Accent palette

@@ -75,8 +75,8 @@ export default function Splash({ onComplete }: SplashProps) {
           <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/30">
             <Wifi size={24} className="text-white" />
           </div>
-          <span className="text-3xl font-extrabold tracking-tight text-white">
-            Ray<span
+          <span className="text-2xl font-extrabold tracking-tight text-white">
+            Ray <span
               className="gradient-text"
               style={{
                 background: "linear-gradient(135deg, #a855f7, #06b6d4)",
@@ -84,7 +84,7 @@ export default function Splash({ onComplete }: SplashProps) {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
               }}
-            >Comm</span>
+            >Communications</span>
           </span>
         </div>
 

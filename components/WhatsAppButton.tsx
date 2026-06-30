@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 const WA_URL =
-  "https://wa.me/8801610001981?text=Hi%2C%20I%27m%20interested%20in%20RayComm%20broadband";
+  "https://wa.me/8801610001981?text=Hi%2C%20I%27m%20interested%20in%20Ray%20Communications%20broadband";
 
 // Official WhatsApp logo path (simplified single-path mark)
 function WhatsAppIcon({ size = 28 }: { size?: number }) {
