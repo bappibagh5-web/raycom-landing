@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MapPin, LayoutList, Wrench, Wifi } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
+import SectionSeamGlow from "@/components/SectionSeamGlow";
 
 const steps = [
   {
@@ -49,10 +50,14 @@ export default function HowItWorks() {
   const lineInView = useInView(lineRef, { once: true, margin: "-60px" });
 
   return (
-    <section id="how-it-works" className="relative py-24 overflow-hidden">
-      {/* Ambient glows */}
+    <section id="how-it-works" className="relative py-24 overflow-hidden" style={{ background: "linear-gradient(180deg, transparent 0%, rgba(10,6,28,0.5) 50%, transparent 100%)" }}>
+      {/* Ambient glows — elongated horizontal band following the connector line */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-purple-600/8 rounded-full blur-3xl" />
+        {/* Wide banner glow aligned with step connector row */}
+        <div className="absolute top-[80px] left-0 right-0 h-48 blur-3xl"
+          style={{ background: "linear-gradient(90deg, rgba(139,92,246,0.08) 0%, rgba(99,102,241,0.12) 30%, rgba(6,182,212,0.1) 70%, rgba(6,182,212,0.06) 100%)" }} />
+        {/* Subtle bottom fade */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-32 bg-indigo-600/6 rounded-full blur-3xl" />
       </div>
 
       <div ref={ref} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,8 +136,8 @@ export default function HowItWorks() {
                   <div className="relative shrink-0">
                     {/* Gradient circle */}
                     <div
-                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}
-                      style={{ boxShadow: `0 4px 20px ${step.glow}` }}
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                      style={{ background: "linear-gradient(135deg, #7c3aed 0%, #4f46e5 50%, #0891b2 100%)", boxShadow: `0 4px 20px ${step.glow}` }}
                     >
                       <Icon size={22} className="text-white" strokeWidth={2} />
                     </div>
@@ -179,6 +184,7 @@ export default function HowItWorks() {
           </MagneticButton>
         </motion.div>
       </div>
+      <SectionSeamGlow />
     </section>
   );
 }

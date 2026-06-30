@@ -70,9 +70,12 @@ export default function Testimonials() {
   const next = () => setActive((v) => (v + 1) % testimonials.length);
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden" style={{ background: "linear-gradient(160deg, transparent 0%, rgba(28,10,50,0.45) 50%, transparent 100%)" }}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 right-0 w-80 h-80 bg-purple-600/10 rounded-full blur-3xl" />
+        {/* Warm purple bloom centered behind the featured quote card */}
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 w-[520px] h-64 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(ellipse, rgba(147,51,234,0.18) 0%, rgba(139,92,246,0.08) 50%, transparent 70%)" }} />
+        <div className="absolute top-1/2 right-0 w-80 h-80 bg-purple-600/8 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +105,7 @@ export default function Testimonials() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="max-w-2xl mx-auto mb-10"
         >
-          <div className="relative glass border border-white/10 rounded-3xl p-8 sm:p-10">
+          <div className="relative rounded-3xl p-8 sm:p-10" style={{ background: "linear-gradient(135deg, #4a1880 0%, #341b6e 35%, #163260 65%, #0c4060 100%)", backdropFilter: "blur(20px)", border: "1px solid rgba(147,51,234,0.35)", boxShadow: "0 0 60px rgba(147,51,234,0.15), inset 0 1px 0 rgba(255,255,255,0.08)" }}>
             <Quote size={32} className="text-purple-400/40 mb-4" />
             <AnimatePresence mode="wait">
               <motion.div

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Plus } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
+import SectionSeamGlow from "@/components/SectionSeamGlow";
 
 const faqs = [
   {
@@ -101,10 +102,9 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="relative py-24">
-      {/* Ambient glow */}
+      {/* Minimal ambient — keep neutral so accordion text stays readable */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-0 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl -translate-y-1/2" />
-        <div className="absolute top-1/3 right-0 w-64 h-64 bg-cyan-500/8 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-0 w-56 h-56 bg-purple-600/6 rounded-full blur-3xl -translate-y-1/2" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,6 +169,7 @@ export default function FAQ() {
           </motion.div>
         </div>
       </div>
+      <SectionSeamGlow />
     </section>
   );
 }

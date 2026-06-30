@@ -51,10 +51,12 @@ export default function WhyChooseUs() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" className="relative py-24">
-      {/* Background glow */}
+    <section id="about" className="relative py-24" style={{ background: "linear-gradient(100deg, rgba(20,8,40,0.5) 0%, transparent 60%)" }}>
+      {/* Background glow — left-anchored radial */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-purple-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-0 w-[480px] h-[480px] -translate-y-1/2 -translate-x-1/4 rounded-full blur-3xl"
+          style={{ background: "radial-gradient(circle, rgba(139,92,246,0.14) 0%, rgba(109,40,217,0.07) 55%, transparent 75%)" }} />
+        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-violet-500/6 rounded-full blur-2xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

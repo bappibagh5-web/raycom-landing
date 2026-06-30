@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Tv, Server } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
+import SectionSeamGlow from "@/components/SectionSeamGlow";
 
 const services = [
   {
@@ -181,6 +182,7 @@ export default function QuickServices() {
           })}
         </div>
       </div>
+      <SectionSeamGlow />
     </section>
   );
 }

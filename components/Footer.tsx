@@ -96,9 +96,12 @@ function ContactLine({
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/8 mt-10">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-[#1a1230]/70 to-transparent" />
+    <footer className="relative border-t border-white/8 mt-10" style={{ background: "linear-gradient(180deg, rgba(6,4,16,0.8) 0%, rgba(4,2,12,0.95) 100%)" }}>
+      {/* Darkest section — anchors the bottom of the page */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030209]/80 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-24 bg-purple-900/10 blur-3xl rounded-full" />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
 

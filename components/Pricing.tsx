@@ -95,7 +95,15 @@ export default function Pricing() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="plans" className="relative py-24">
+    <section id="plans" className="relative py-24" style={{ background: "linear-gradient(180deg, transparent 0%, rgba(30,12,54,0.55) 45%, rgba(18,8,38,0.35) 100%)" }}>
+      {/* Section ambient — warm/slightly lighter than hero base */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Wide soft glow centered behind Most Popular card (3rd of 5) */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full blur-[80px]"
+          style={{ background: "radial-gradient(circle, rgba(147,51,234,0.14) 0%, rgba(6,182,212,0.06) 55%, transparent 75%)" }} />
+        {/* Faint warm upper-right accent */}
+        <div className="absolute top-0 right-1/4 w-64 h-48 bg-violet-600/7 rounded-full blur-3xl" />
+      </div>
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
@@ -129,9 +137,13 @@ export default function Pricing() {
               whileHover={{ y: -6 }}
               className={`relative rounded-2xl p-5 flex flex-col gap-5 transition-shadow duration-300 ${
                 plan.highlighted
-                  ? "bg-gradient-to-b from-purple-600/30 to-cyan-600/10 border border-purple-500/50 shadow-xl shadow-purple-500/20 scale-[1.03]"
+                  ? "border border-purple-400/40 shadow-xl shadow-purple-500/30 scale-[1.03]"
                   : "glass border border-white/10 hover:border-purple-500/30"
               }`}
+              style={plan.highlighted ? {
+                background: "linear-gradient(135deg, #4f1b8a 0%, #3b2070 30%, #1a3a6b 65%, #0e4d6e 100%)",
+                backdropFilter: "blur(16px)",
+              } : undefined}
             >
               {/* Most Popular badge */}
               {plan.highlighted && (
